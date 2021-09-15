@@ -6,5 +6,4 @@
 ### 参考 : サイト参照
 > https://mominoki-blog.com/howto_bigsur_c_program_202105/
 ### 言語詳細
-- document dir c_lang に記述
-
+- document　dir　c_lang.md に記述
