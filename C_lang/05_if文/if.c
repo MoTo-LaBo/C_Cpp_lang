@@ -2,18 +2,27 @@
 
 int main(void)
 {
-    int a;
-    printf("数値を入力: ");
+    int num;
+    printf("1 ~ 3の値を入力して下さい: ");
     // キーボードから整数を入力
-    scanf("%d", &a);
+    scanf("%d", &num);
     // 入力した値が正の数かどうかを調べる
-    if (a > 0)
+    if (num == 1)
     {
-        printf("入力した値は、正の数です\n"); // 正の数だったあ場合に実行
+        printf("one\n"); // numが1だった場合に実行
+    }
+    else if (num == 2)
+    {
+        printf("two\n"); // numが2だった場合に実行
+    }
+    else if (num == 3)
+    {
+        printf("three\n"); // numが3だった場合に実行
     }
     else
     {
-        printf("入力した値は、正の数ではありません\n"); // 正の数でなかった場合
+        printf("不適切な値です\n"); // それ以外の値が入力された場合の処理
     }
+
     return 0;
 }
