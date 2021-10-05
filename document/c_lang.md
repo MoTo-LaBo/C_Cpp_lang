@@ -209,16 +209,58 @@
 
   - **local変数**　->　**定義された関数内だけ**
     - *定義されている関数が別の場所であれば同じ名前でも構わない*
+## 6. file分割
+- 実用的な program は大規模
+- file の分割は必ず必要になってくる
+- 分割の仕方は program 機能によって様々
+### <u>header file, source file</u>
+- **header file**
+  - 拡張子　`.h`
+  - プリプロセッサーやマクロの定義
+  - program の先頭部分に来るべき情報
+    - *main program の前に必ず読み込まれるモノ*
+    - *global変数, prototype宣言*
 
+- **source file**
+  - 拡張子　`.c`
+  - program や function の定義に使用
+### <u>2重 include 防止</u>
+    #ifndef _(大文字で記述したfile名)_H_
+    #define _(大文字で記述したfile名)_H_
 
+    プロトタイプ宣言;
+    プロトタイプ宣言;
 
+    #endif // _(大文字で記述したfile名)_H_
+- **#ifndef,　#define,　#endif**
+  - **マクロ**　と言い C言語そのものの文法とは無関係
+  - *compile に指令を与えるもの*
 
+- **#ifndef ~ #endif**
+  - 横に定義されているモノ : _〇〇_H_ がもし定義されていなかったら、#endif までの中に含まれている program を実行する
 
+- **#define**
+  - 定義をする : _〇〇_H_　を定義する
+  - file名は絶対被らないので、C言語ではこういう風にしましょうという文化がある
 
+- <u>上記の性質を利用して **2重 include** の防止をしている</u>
 
-
-
-
-
-
+> 最近の compile は上記のような事をやらなくてもいいようにできているが...
+> C言語は古めの source code などもメンテナンスする場合などもある
+> 2重 include 防止をしないと上手く program が動かない事がある
+### <u>#include の使い分け</u>
+- **#include "・・・ "**
+  - user 定義関数の include
+  - 対応する `.c` fileがある場合
+- **#include <・・・>**
+  - 関数の定義の部分がすでに compile されているモノ
+  - `.lib` fileとしてすでに source code が compile 済
+  - `stdio.h` は **標準ライブラリ** と呼ばれるものを使用する時に用いる
+    - *printf( ) etc...*
+### <u>extern 修飾子</u>
+    # 例）
+    extern int 〇〇;
+- **extern**
+  - global変数は、複数の source file (.c file) で使用するが、定義はどちらか1箇所にしか記述できない。このような時に用いる
+  - extern 英語で「 外に 」を意味する。この宣言が記述されている他の file にある事を意味する
 
