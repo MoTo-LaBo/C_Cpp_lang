@@ -37,6 +37,4 @@ void setData(student_data* data, int id, char* name, int age) {
     data->age = age;           // 年齢のコピー
 }
 // データの表示
-void showData(student_data* data) {
-    printf("学生番号:%d 名前:%s 年齢:%d\n", data->id, data->name, data->age);
-}
+void showData(student_data* data) { printf("学生番号:%d 名前:%s 年齢:%d\n", data->id, data->name, data->age); }
