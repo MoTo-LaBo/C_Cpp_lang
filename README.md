@@ -16,7 +16,7 @@
       ├── README.md
       └── document
           ├── c_lang.md
-          ├── cc_lang.md
+          ├── c++_lang.md
           ├── error_handling.md
           └── pointer.md
 - **<u>document　dirctory に記述</u>**
