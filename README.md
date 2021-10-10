@@ -16,9 +16,9 @@
       ├── README.md
       └── document
           ├── c_lang.md
+          ├── c_pointer.md
           ├── c++_lang.md
-          ├── error_handling.md
-          └── pointer.md
+          └── error_handling.md
 - **<u>document　dirctory に記述</u>**
   - `c_lang.md`
     - *C言語詳細, doucument*
