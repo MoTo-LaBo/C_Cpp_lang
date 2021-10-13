@@ -12,10 +12,10 @@
 
 class Class {
 public:
-    void set(int num);    // m_num に値を設定する
-    int get();            // m_num の値を取得する
+    void set(int num);  // m_num に値を設定する
+    int get();          // m_num の値を取得する
 private:
     int m_num;
 };
 
-#endif // _CLASS_H_
+#endif  // _CLASS_H_
