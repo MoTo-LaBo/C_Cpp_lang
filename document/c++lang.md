@@ -195,13 +195,52 @@
 - **get( ) : ゲッター**
   - *メンバ変数に読み込みを行う関数*
 
+## **4. 生成と消去**
+- *メンバ関数の特殊 method*
 
+- `constructor`
 
+  - *class を instance化した時に自動的に1度だけ呼び出される*
 
+  - *主に初期化処理を行う*
 
+  - **戻り値がないので型を定義する必要はない**
 
+- `destructor`
 
+  - *class の instance が解放される時に自動で１度だけ呼び出される*
 
+  - *class名の先頭に　**~ (チルダ)**　をつけたもの*
+
+  - *終了処理を行う*
+
+### **<u>instance の生成とタイミング</u>**
+- 画像 data など大量の memory を消費する instance の場合は, **生成と消去**　のタイミングが制御できないと不便
+
+- `new演算子`
+
+  ```
+  new constructor名( )
+  ```
+
+- `delete演算子`
+
+  ```
+  delete instance名
+  ```
+
+### **<u>C言語 malloc, free を使用しない理由</u>**
+
+- **C++では malloc( )関数 (calloc, realloc も同様) 及び free( )関数を使わない**
+
+  - `malloc() 関数では　constructor　を呼び出す事ができない`
+
+  - `free() 関数では　destructor　を呼び出す事ができない`
+
+  - *なので memory 生成及び削除は　`new`　と　`delete`　が用いられる*
+
+### **<u>配列の生成</u>**
+- **delete[ ]** を使用する
 
 
 
