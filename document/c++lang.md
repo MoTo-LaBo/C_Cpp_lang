@@ -242,11 +242,55 @@
 ### **<u>配列の生成</u>**
 - **delete[ ]** を使用する
 
-## **4. static variable (静的メンバ)**
+## **5. static variable (静的メンバ)**
 
 - **instance を生成する事なく利用できるメンバ変数・関数**
 
   - instance 生成が必要なメンバを　**instance メンバ**　と呼び
+
+## **6. 継承 inheritance**
+- object指向言語の重要な特性　->　**継承(inheritance : インヘリタンス)**
+  - *あるメンバ class を他の class に引き継ぐ(継承させる)という効果がある*
+
+### **<u>親 class . 子 class</u>**
+
+- **親 class または super class**
+
+- **子 class または sub class**
+
+### **<u>実装例</u>**
+  ```
+  class 子class : public 親class
+  ```
+
+### **<u>sub の costructor & destructor</u>**
+- *sub class の constructor と destructor の挙動*
+
+- `constructor`
+  - **親class**　->　**親constructor 実行**　->　**子class**　->　**子constructor 実行**
+
+
+- `destructor`
+  - **子class**　->　**子destructor 実行**　->　**親class**　->　**親destructor 実行**
+
+### **<u>protected メンバ</u>**
+
+- `protected`
+
+  - **privateメンバ**　同様, class外からのアクセスはできない
+
+  - **protectedメンバ**は, 子 class から見れば　**public**　同様に, class の外から見れば　**private**　同様に振る舞う
+
+  - sub class のみに access を許すメンバには　`protected`　修飾子を付ける
+
+### **<u>単一継承と多重継承</u>**
+- 親class が一つしかないような継承の仕方を　`単一継承`
+
+- C++ では一つの class に複数の親class を設定することができる
+
+  - 上記を　**多重継承**　と言う
+
+
 
 
 
