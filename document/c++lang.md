@@ -369,20 +369,56 @@
 
 - **set ( セッター ), get ( ゲッター )**　のような case の処理は, オーバーヘッドが少ないうえに, 頻繁に使用される事から, 一般的に　**const**　などと併用して　**inline**　を用いると　`C++ program パフォーマンス`　を向上させると言われている
 
+## **11. STL①**
+
 ### **<u>STLとは？</u>**
 - **STL ( Standard Template Library )**
   - template を用いた C++ の library であり, program の上で必要な様々な data形式を, 煩雑な記述なしに誰でも簡単に利用できる
 
+### **<u>配列とSTL</u>**
+- **vector,　list,　map**　->　配列の概念を拡張したもの
 
+  - *size を意識せずに使える配列*
 
+### **<u>vector</u>**
+- **動的配列**
+  - size を意識しないで使用できる
 
+### **<u>vector method</u>**
 
+|    関数名    |               意味               |
+| :----------: | :------------------------------: |
+| push_back( ) |            要素の追加            |
+|   clear( )   |           要素のクリア           |
+|   size( )    |      配列の大きさを得る関数      |
+| capacity( )  | 動的配列に追加できる要素の許容量 |
+|   empty( )   |     要素が空かどうかを調べる     |
 
+### **<u>List</u>**
+- **listは任意の位置に自由に data を挿入できる**
 
+### **<u>iterator</u>**
+- **list には　vector や配列のような index を使う事ができない**
+  - なので　`iterator`　を使用する
 
+### **<u>vector と List の共通点と違う点</u>**
+- vector も list と同様に iterator を使用できる
 
+- **remove** は　**list**　の中から指定された　iterator値をしてするとそれを除去してくれる
 
+- **remove**　method　は　**vector**　には存在しない
 
+### **<u>List method</u>**
 
+|    関数名     |         意味         |
+| :-----------: | :------------------: |
+| push_front( ) | 先頭に要素を追加する |
+| push_back( )  | 末尾に要素を追加する |
+| pop_front( )  | 先頭の要素を削除する |
+|  pop_back( )  | 末尾の要素を削除する |
+|   insert( )   |    要素を挿入する    |
+|   erase( )    |    要素を削除する    |
+|   clear( )    |   全要素を削除する   |
 
+## **12. STL②**
 
