@@ -290,7 +290,25 @@
 
   - 上記を　**多重継承**　と言う
 
+## **7. polymorphism(ポリモーフィズム)**
+- **override (オーバーライド)** , **overload (オーバーロード)** を総称して　`Polymorphism(ポリモーフィズム)`　と言う
 
+  - **多態性**,　**多様性**
+
+  - メンバ関数の名前が統一される事により, 名前を覚えることや, 記述ミスを減らせる
+
+### **<u>Overload</u>**
+- constructor を含め, 全てのメンバ変数, 引数, 及び戻り値が違っていれば, **同じ名前**　のついた複数の method を定義する事ができる
+
+- 同様の事が constructor にも言える
+  - 引数が付いていないものを　**default constructor**　と言う
+
+  - 普通は default constructor を省略できる
+
+  - *1つでも引数が付いている constructor がある場合は*
+    - **defaul constructor が省略できないので注意する**
+### **<u>Override</u>**
+- 親 class の method が上書きされる
 
 
 
